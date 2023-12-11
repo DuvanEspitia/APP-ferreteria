@@ -1,0 +1,238 @@
+
+#noticia1{
+    width: 30% !important;
+}
+.py-5 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+.c-content{
+    text-align: justify ;
+}
+.news{
+    color: rgb(5, 5, 97);
+}
+.buton-conocermas{
+    border: none;
+    background-color:rgb(5, 5, 97) ;
+    color: yellow;
+    border-radius: 4px 4px 4px 4px;
+}
+.buton-conocermas:hover{
+    border: none;
+    background-color:rgb(8, 8, 142) ;
+   
+}
+.pad-blog{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 40px;
+}
+.centrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img{
+    width: 250px;
+  height: 200px;
+}
+.img01{
+    width: 80%;
+  height: auto;
+}
+.blog-c-admin{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.alert{
+    position: relative;
+    left: 1000;
+    top: 250;
+}
+.title-new{
+    text-decoration: none;
+    width: 40%;
+    padding: 5px;
+    border-radius: 7px;
+}
+.content-news{
+    width: 40%;
+    height: 200px;
+    resize: none;
+    border-radius: 7px;
+}
+.title{
+    color: rgb(4, 10, 92);
+}
+.button-32 {
+    margin-top: 25px;
+  background-color: #fff000;
+  border-radius: 12px;
+  color:  rgb(4, 10, 92);
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  width: 20%;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-32:not(:disabled):hover,
+.button-32:not(:disabled):focus {
+  outline: 0;
+  background: #f4e603;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+.button-32:disabled {
+    filter: saturate(0.2) opacity(0.5);
+    -webkit-filter: saturate(0.2) opacity(0.5);
+    cursor: not-allowed;
+  }
+  .button-33 {
+  background-color: #fff000;
+  border-radius: 12px;
+  color:  rgb(4, 10, 92);
+  cursor: pointer;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-align: center;
+  transition: 200ms;
+  width: 40%;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.btn2{  
+    font-weight: bold;
+    background-color: transparent;
+    color:  rgb(4, 10, 92);
+    border: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.blog-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.blog-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}.blog-id{
+    font-size: small;
+}.blog-text{
+    font-size: 21px;
+}
+.button-33:not(:disabled):hover,
+.button-33:not(:disabled):focus {
+  outline: 0;
+  background: #f4e603;
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2), 0 3px 8px 0 rgba(0,0,0,.15);
+}
+.button-33:disabled {
+    filter: saturate(0.2) opacity(0.5);
+    -webkit-filter: saturate(0.2) opacity(0.5);
+    cursor: not-allowed;
+  }
+.noticias{
+    
+    width: 100% ;
+    height: auto ;
+    display: grid ;
+    grid-template-columns: 33.33% 33.33% 33.33%  ;
+    place-items: center ;
+}
+.blog-text{
+    color: black;
+}
+.column {
+    width: calc(33.33% - 20px); /* Adjust the width as needed */
+    margin: 10px;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 10px;
+ 
+}
+.noticia{
+    background-color: white;
+    border-radius: 15px;
+    width: 80%;
+    height: auto;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 1px 8px rgba(0, 0, 0, 0.388);
+}
+.centered-message {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh; /* Toma toda la altura de la ventana */
+}
+
+.alert {
+    /* Estilos para el contenedor del mensaje */
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 2px solid #fbff00;
+}
+
+/* Estilos para el mensaje de texto */
+.alert p {
+    font-size: 25px;
+    margin: 0;
+    color: #0c0881;
+}
+.t-contentsub{
+    font-size: x-large;
+    color: #0c0881;
+}
+.p-contentb{
+    height: 50vh;
+    background-color: #04023c17;
+    border-radius: 10px;
+}
+@media (max-width: 800px) {
+    .noticias{
+    
+        display: grid ;
+        grid-template-columns: auto;
+        place-items: center ;
+        width: 100% ;
+        height: auto ;
+    }
+    .noticia{
+        background-color: white;
+        border-radius: 15px;
+        width: 80%;
+        height: auto;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 5px 1px 8px rgba(0, 0, 0, 0.388);
+    }
+    .img{
+        width: 100%;
+    }
+   
+
+}

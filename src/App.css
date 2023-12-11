@@ -1,7 +1,7 @@
-.App {
-  text-align: center;
-}
 
+html, body {
+  height: 100%;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -23,7 +23,15 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
+.content {
+  flex: 1;
+}
 .App-link {
   color: #61dafb;
 }
@@ -35,4 +43,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+.footer {
+  flex-shrink: 0;
+}
+.edi-img-conta{
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
 }

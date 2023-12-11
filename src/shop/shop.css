@@ -1,0 +1,218 @@
+.shopTitle {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 40px;
+  }
+  .products {
+    width: 100% ;
+    height: auto ;
+    display: grid ;
+    grid-template-columns: 33.33% 33.33% 33.33%  ;
+    place-items: center ;
+  }
+  
+  .product {
+    background-color: white;
+    border-radius: 15px;
+    width: 80%;
+    height: auto;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 1px 8px rgba(0, 0, 0, 0.388);
+  }
+  
+  .product img {
+    width: 290px;
+  }
+  
+  .product .description1 {
+    text-align: center;
+  }
+  .img-p-c{
+    width: 70%;
+    height: auto;
+  }
+  
+  .product:hover {
+    transition: 0.3s ease-in;
+    cursor: pointer;
+  }
+  
+  .title-products{
+    font-weight: 700;
+    color: rgb(5, 5, 111);
+  
+  }
+  .title-product{
+    font-weight: 700;
+    color: rgb(85, 84, 84);
+  
+  }
+  .addToCartBttn {
+    background-color: transparent;
+    border: 2px solid rgb(19, 19, 19);
+    min-width: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 15px;
+  }
+  
+  .addToCartBttn:hover {
+    background-color: rgb(19, 19, 19);
+    color: white;
+    cursor: pointer;
+  }
+    .addbutton{
+      height: auto;
+
+      text-decoration: none;
+      border: none;
+      background-color: rgb(2, 10, 114);
+      color: white;
+      border-radius: 5px 5px 5px 5px;
+      margin-left: 2px;
+      margin-right: 2px;
+      
+    }
+    .category-buttons{
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .counter-p{
+
+      font-style: none;
+      height:auto;
+      border-radius: 200px;
+
+    }
+    .button{
+      border: none;
+    }
+    .button:hover{
+      background-color: rgba(0, 0, 255, 0.148);
+      border-radius: 25px;
+    }
+    .descrep{
+      text-decoration: none;
+    }
+    .t-content{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .title-new1{
+      text-decoration: none;
+      width: auto;
+      padding: 5px;
+      border-radius: 7px;
+  }
+  /* Agrega estos estilos en tu archivo CSS */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.pagination li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.pagination a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid ;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+  background-color: white;
+  color: #fff;
+}
+
+ .pagination .active a {
+    background-color:  rgb(2, 10, 114);
+  color: #fff !important;
+    cursor: default;
+  }
+ 
+
+/* Opcional: Estilos para los botones Anterior y Siguiente */
+.pagination .break-me,
+.pagination .previous,
+.pagination .next {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.pagination .break-me a,
+.pagination .previous a,
+.pagination .next a {
+  padding: 8px 12px;
+  color: white;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  background-color:  rgb(2, 10, 114);
+  margin-left: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination .break-me a:hover,
+.pagination .previous a:hover,
+.pagination .next a:hover {
+  background-color: #000000;
+  color: #fff;
+}
+.categories-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toggle-button {
+  /* Estilos del botón principal */
+  cursor: pointer;
+}
+
+.dropdown {
+  /* Estilos del desplegable para dispositivos móviles */
+  display: none;
+}
+
+
+  @media  (max-width: 768px) {
+    
+ 
+    .products {
+      display: grid ;
+      grid-template-columns:  auto  ;
+      place-items: center ;
+      margin-bottom: 105px;
+    }
+    .product {
+      margin-top: 25px;
+      border-radius: 15px;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  
+    }
+    .product img {
+      width: 150px;
+    }
+   }
