@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Product } from "../shop/product";
+import whataspp from "../img/w.png";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import "./shop.css";
@@ -27,8 +28,8 @@ export const Shop = () => {
     const fetchData = async () => {
       try {
         const [categoriesResponse, productsResponse] = await Promise.all([
-          axios.get( Global.url +"/api/categorias/consultarcategoria"),
-          axios.get( Global.url +"/api/inventario/consultarinventario")
+          axios.get(Global.url + "/api/categorias/consultarcategoria"),
+          axios.get(Global.url + "/api/inventario/consultarinventario")
         ]);
 
         setCategories(categoriesResponse.data);
@@ -63,9 +64,49 @@ export const Shop = () => {
   const handlePageClick = ({ selected }) => {
     setCurrentPage(selected);
   };
+  useEffect(() => {
+    // Asegúrate de obtener el elemento correcto para cerrar el alerta.
+    const closeBtn = document.querySelector(".close-alert");
+    const alertContainer = document.querySelector(".alert-container");
+
+    // Función para cerrar el alerta.
+    const handleCloseAlert = () => {
+      alertContainer.style.display = "none";
+    };
+
+    // Verifica si el elemento se encontró correctamente y agrega el evento de clic.
+    if (closeBtn && alertContainer) {
+      closeBtn.addEventListener("click", handleCloseAlert);
+    } else {
+      console.error("No se encontraron los elementos necesarios para cerrar el alerta.");
+    }
+
+    // Limpia el efecto para remover el listener cuando el componente se desmonte.
+    return () => {
+      if (closeBtn && alertContainer) {
+        closeBtn.removeEventListener("click", handleCloseAlert);
+      }
+    };
+  }, []);
 
   return (
     <div className="shop">
+
+
+<div class="alert-container">
+  <div class="alert">
+    <span class="close-alert">&times;</span>
+    <h4>CONSTRUCTOR!!</h4>
+    <p className="tex-an">Para compras inferiores a 150 mil y/o </p>
+    <p className="tex-an">mayorista comunicate.</p>
+    <div className="col-r">
+    <a href='https://wa.link/7r6ra8'>
+            <img className='i3' src={whataspp}></img>
+          </a>
+          <p className="tex-an">316 4484963</p></div>
+  </div>
+</div>
+
       <div className="shopTitle">
         <h2 className="title-products">PRODUCTOS</h2>
         <h3 className="title-product">Herramientas y productos de construcción.</h3>
@@ -83,7 +124,7 @@ export const Shop = () => {
                 key={categoria.idcategoria}
                 onClick={() => setSelectedCategory(categoria.idcategoria.toString())}
               >
-                {categoria.nombre}
+                <h1 className="t1">{categoria.nombre}</h1>
               </button>
             ))}
           </div>

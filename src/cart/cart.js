@@ -9,7 +9,7 @@ export const Cart = () => {
    const { cartItems } = useContext(ShopContext);
    const [hasItemsInCart, setHasItemsInCart] = useState(false);
    const [totalAmount, setTotalAmount] = useState(0);
-  
+
 
    const navigate = useNavigate();
 
@@ -51,14 +51,19 @@ export const Cart = () => {
                   <p>Subtotal: ${totalAmount}</p>
                </div>
                <div className="centrar">
-                  <button onClick={() => navigate("/tienda")}>Continuar comprando </button>
+                  <button onClick={() => navigate("/tienda")}>Continuar comprando</button>
+
                   {cartItems.some((item) => item.price === 0) ? (
                      <button disabled>Precio no definido</button>
                   ) : (
-                     <button onClick={() => navigate("/compra/datos")} >
-                        Ir a pagar
-                     </button>
-                  )} </div>
+                     totalAmount < 150000 ? (
+                        <p className="text-r" disabled>La compra debe ser minimo 150.000</p>
+                     ) : (
+                        <button onClick={() => navigate("/compra/datos")}>
+                           Ir a pagar
+                        </button>
+                     )
+                  )}</div>
             </div>
          ) : (
             <h1>Tu carro está vacío</h1>

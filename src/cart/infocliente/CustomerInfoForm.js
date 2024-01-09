@@ -8,69 +8,74 @@ import Global from '../../varibleBackend/Global';
 const CustomerInfoForm = () => {
   const { cartItems } = useContext(ShopContext);
   const [data, setData] = useState([]);
-  const [flete,setFlete]=useState(false)
+  const [flete, setFlete] = useState(false)
   const [cities, setCities] = useState([]);
   const [selectedDepartment, setSelectedDepartment] = useState(null);
   const [selectedDepartmentId, setSelectedDepartmentId] = useState('');
   const [facturaElectronica, setFacturaElectronica] = useState(false);
   const [totalAmount, setTotalAmount] = useState(0);
+  const [aceptoPoliticas, setAceptoPoliticas] = useState(false);
+  const handleAceptoPoliticasChange = () => {
+    setAceptoPoliticas(!aceptoPoliticas);
+  };
+
   const [customerInfo, setCustomerInfo] = useState({
     name: '',
     email: '',
     address: '',
     phoneNumber: '',
-    departamento:'',
+    departamento: '',
     ciudad: '',
-    facturaElectronica:'No',
-    identificacion:''
+    facturaElectronica: 'No',
+    identificacion: ''
   });
   useEffect(() => {
     let newTotalAmount = 0;
     for (const cartItem of cartItems) {
-       if (typeof cartItem.price != "") {
-          const itemTotal = cartItem.price * cartItem.quantity;
-          newTotalAmount += itemTotal;
-       }
+      if (typeof cartItem.price != "") {
+        const itemTotal = cartItem.price * cartItem.quantity;
+        newTotalAmount += itemTotal;
+      }
     }
     setTotalAmount(newTotalAmount);
-      console.log(newTotalAmount)
-    
- }, [cartItems]);
-  
- useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const response = await fetch('https://api-colombia.com/api/v1/Department');
-      const result = await response.json();
-      setData(result);
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  };
-  fetchData();
-}, []);
+    console.log(newTotalAmount)
 
-useEffect(() => {
-  const fetchCities = async () => {
-    try {
-      if (selectedDepartmentId) {
-        const response = await fetch(`https://api-colombia.com/api/v1/Department/${selectedDepartmentId}/cities`);
+  }, [cartItems]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://api-colombia.com/api/v1/Department');
         const result = await response.json();
-        const filteredData = result.map((item) => item.name);
-        setCities(filteredData);
+        setData(result);
+      } catch (error) {
+        console.error('Error fetching data:', error);
       }
-    } catch (error) {
-      console.error('Error fetching cities:', error);
-    }
-  };
+    };
+    fetchData();
+  }, []);
 
-  fetchCities();
-}, [selectedDepartmentId]);
+  useEffect(() => {
+    const fetchCities = async () => {
+      try {
+        if (selectedDepartmentId) {
+          const response = await fetch(`https://api-colombia.com/api/v1/Department/${selectedDepartmentId}/cities`);
+          const result = await response.json();
+          const filteredData = result.map((item) => item.name);
+          setCities(filteredData);
+        }
+      } catch (error) {
+        console.error('Error fetching cities:', error);
+      }
+    };
+
+    fetchCities();
+  }, [selectedDepartmentId]);
 
   useEffect(() => {
     // Observar cambios en selectedDepartment y actualizar customerInfo
     if (selectedDepartment) {
-      setCustomerInfo((prevCustomerInfo) => ({...prevCustomerInfo,departamento: selectedDepartment.departamento,}));
+      setCustomerInfo((prevCustomerInfo) => ({ ...prevCustomerInfo, departamento: selectedDepartment.departamento, }));
     }
     console.log(cartItems)
   }, [selectedDepartment]);
@@ -83,7 +88,7 @@ useEffect(() => {
     if (name === 'departamento') {
       const selectedNombre = event.target.options[event.target.selectedIndex].dataset.nombre;
 
-      
+
       const selectedDepartmentData = data.find((item) => item.id === value);
       console.log(selectedDepartmentData);
       setCities([]); // Limpiar las ciudades al cambiar el departamento
@@ -92,17 +97,17 @@ useEffect(() => {
 
       setCustomerInfo((prevCustomerInfo) => ({
         ...prevCustomerInfo,
-        departamento: selectedNombre ,
+        departamento: selectedNombre,
       }));
-     
-    }else if (type === 'checkbox' && name === 'facturaElectronica') {
+
+    } else if (type === 'checkbox' && name === 'facturaElectronica') {
       setFacturaElectronica(checked);
       setCustomerInfo((prevCustomerInfo) => ({
         ...prevCustomerInfo,
         facturaElectronica: checked ? 'Sí' : 'No',
       }));
     }
-       else {
+    else {
       setCustomerInfo((prevCustomerInfo) => ({
         ...prevCustomerInfo,
         [name]: value,
@@ -112,7 +117,7 @@ useEffect(() => {
   useEffect(() => {
     // Logic that depends on the updated state
     console.log(customerInfo.ciudad);
-  
+
     if (totalAmount >= 400000 && customerInfo.ciudad === 'Cali') {
       setFlete(true);
     } else {
@@ -130,19 +135,19 @@ useEffect(() => {
     const productsArray = cartItems.map((item) => {
       const productName = item.product && item.product.Nom_prodct ? item.product.Nom_prodct : 'Unknown Product';
 
-      
+
       return {
         name: productName,
         precio: item.price,
         cantidad: item.quantity,
-        referencia:item.nombre
+        referencia: item.nombre
 
       };
     });
-  
+
     return productsArray;
   };
-  
+
 
   const FuncionComprar = async () => {
 
@@ -150,11 +155,11 @@ useEffect(() => {
     console.log(productsArra)
     initMercadoPago('APP_USR-84d96ddf-cebf-4a40-82f7-fb2055b414b1')
     try {
-      const response = await axios.post( Global.url +'/api/pagos/', {
-        products:productsArra,
+      const response = await axios.post(Global.url + '/api/pagos/', {
+        products: productsArra,
         customerInfo: customerInfo,
       });
-        console.log(response)
+      console.log(response)
       // Assuming the response.data is a URL
       window.location.href = response.data;
     } catch (error) {
@@ -187,7 +192,7 @@ useEffect(() => {
             name="identificacion"
             value={customerInfo.identificacion}
             onChange={handleInputChange}
-           
+
           />
         </label>
 
@@ -208,7 +213,7 @@ useEffect(() => {
             name="departamento"
             value={selectedDepartmentId}
             onChange={(event) => handleInputChange(event)}
-           
+
           >
             <option value="">Seleccione un departamento</option>
             {data.map((item) => (
@@ -236,7 +241,7 @@ useEffect(() => {
         </label>
 
         <label>
-          Dirección:
+          Dirección de entrega:
           <input
             className="input-shop"
             type="text"
@@ -257,33 +262,51 @@ useEffect(() => {
           />
         </label>
         <label>
-              <div className='centrar'>
-          <p>  Factura Electrónica: </p>
-          <div>
-          
-            <label>
-              <div className='centrar-slec'>
-              <b>Sí</b>
-              <input
-                type="checkbox"
-                name="facturaElectronica"
-                checked={facturaElectronica}
-                onChange={handleInputChange}
-              />
-               </div>
-            </label>
+          <div className='centrar'>
+            <p>  Factura Electrónica: </p>
+            <div>
+
+              <label>
+                <div className='centrar-slec'>
+                  <b>Sí</b>
+                  <input
+                    type="checkbox"
+                    name="facturaElectronica"
+                    checked={facturaElectronica}
+                    onChange={handleInputChange}
+                  />
+                </div>
+              </label>
             </div>
-            </div>
-           
-       
+          </div>
+
+
         </label>
-        </form>
-        <p>{flete ? ("Envio gratis"):("AVISO: El cliente debe asumir el costo de envio contraentrega.")}</p>
-        <p>Valor: { totalAmount}</p>
-        <button className="btndata" onClick={FuncionComprar}>
-          <img className="img2" src={logop} alt="Mercado Pago" />
-          Pagar con Mercado Pago
-        </button>
+        <label>
+          <div>
+
+            <label>
+              <div className='centrar-managedata'>
+                <b>
+                  <input
+                    type="checkbox"
+                    onChange={handleAceptoPoliticasChange}
+                  />
+                  Acepto las políticas de manejo de datos
+                </b>
+              </div>
+              <a href="https://gobiernodigital.mintic.gov.co/portal/Secciones/Politicas-de-privacidad/">Ver más</a>
+            </label>
+          </div>
+        </label>
+      </form>
+      <p>{flete ? ("Envio gratis") : ("AVISO: El cliente debe asumir el costo de envio contraentrega.")}</p>
+      <p>Valor: {totalAmount}</p>
+      <button className="btndata" onClick={FuncionComprar} disabled={!aceptoPoliticas}>
+        <img className="img2" src={logop} alt="Mercado Pago" />
+        Pagar con Mercado Pago
+      </button>
+
     </div>
   );
 };

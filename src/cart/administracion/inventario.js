@@ -280,11 +280,28 @@ function Inventario() {
                             <option value="3/8 X 3">3/8 X 3"</option>
                             <option value="1/4 X 1">1/4 X 1"</option>
                             <option value="5/16 X 1">5/16 X 1"</option>
+                            <option value="5/16 x 1 1/4">5/16 x 1 1/4</option>
+                            <option value="5/16 x 1 1/2">5/16 x 1 1/2</option>
+                            <option value="5/16 x 2">5/16 x 2</option>
+                            <option value="5/16 x 2 1/2">5/16 x 2 1/2</option>
                             <option value="1/4 x 1,1/2">1/4 x 1,1/2"</option>
                             <option value="1/4 x 1/4">1/4 x 1/4"</option>
+                            <option value="1/4 x 3/4">1/4 x 3/4</option>
+                            <option value="1/4 x 1 1/4">1/4 x 1 1/4</option>
+                            <option value="1/4 x 1 1/2">1/4 x 1 1/2</option>
+                            <option value="1/4 x 2">1/4 x2"</option>
+                            <option value="1/4 x 2 1/2">1/4 x 2 1/2</option>
                             <option value="5/16 x 5/16">5/16 x 5/16"</option>
+                            <option value="5/16 x 3/4">5/16 x 3/4</option>
                             <option value="1/4 x 1 MT">1/4 x 1 MT</option>
                             <option value="5/16 x 1 MT">5/16 x 1 MT</option>
+                            <option value=" 1kg"> 1kg</option>
+                            <option value=" 2kg"> 2kg</option>
+                            <option value=" 5kg"> 5kg</option>
+                            <option value=" 7.5kg"> 7.5kg</option>
+                            <option value=" 12.5kg"> 12.5kg</option>
+                            <option value=" 15kg"> 15kg</option>
+
                             <option value="5/16 x 1.65 MT">5/16 x 1.65 MT</option>
                             <option value="3/8 x 1 MT">3/8" x 1 MT</option>
                             <option value="3 x 4">3" x 4"</option>
@@ -292,6 +309,9 @@ function Inventario() {
                             <option value="3/8">3/8"</option>
                             <option value="5/8">5/8"</option>
                             <option value="74 X 41 MM">74 X 41 MM</option>
+                            <option value="No aplica">No aplica</option>
+
+                            
                         </select >
 
                         <input className='title-new' id='precio' type='number' min="0" placeholder='precio'></input>

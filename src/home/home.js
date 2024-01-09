@@ -151,7 +151,7 @@ function Home() {
             <div className='announcemnts' >
               <div className='center'>
                 <img src={c2}
-                  className='img-target2' />
+                  className='img-target2' alt='Accesorios inoxidables<' />
               </div>
               <div class="centrar">
                 <Link to="/tienda?category=1">
@@ -169,7 +169,7 @@ function Home() {
             <div className='announcemnts' >
               <div className='center'>
                 <img src={c1}
-                  className='img-target2' />
+                  className='img-target2' alt='Soldadura' />
               </div>
               <div class="centrar">
                 <Link to="/tienda?category=2">
@@ -183,7 +183,7 @@ function Home() {
             <div className='announcemnts' >
               <div className='center'>
                 <img src={c3}
-                  className='img-target2' />
+                  className='img-target2' alt='Abrasivos' />
               </div>
               <div class="centrar">
                 <Link to="/tienda?category=3">
@@ -198,7 +198,7 @@ function Home() {
               <div className='center'>
 
                 <img src={c4}
-                  className='img-target2' />
+                  className='img-target2' alt='Herramienta especializada' />
               </div>
               <div class="centrar">
                 <Link to="/tienda?category=3">
@@ -228,7 +228,7 @@ function Home() {
               <div className='products1' >
                 <div className='product1' >
                   <div className='center'>
-                    <img src={a2} className='img-target2' />
+                    <img src={a2} className='img-target2' alt='Codo soldar inox' />
                   </div>
                   <div class="centrar">
                     <Link to="/tienda?category=1">
@@ -240,7 +240,7 @@ function Home() {
                 </div>
                 <div className='product1' >
                   <div className='center'>
-                    <img src={a3} className='img-target' />
+                    <img src={a3} className='img-target'alt='Codos inox' />
                   </div>
                   <div class="centrar">
                     <Link to="/tienda?category=1">
@@ -252,7 +252,7 @@ function Home() {
                 </div>
                 <div className='product1' >
                   <div className='center'>
-                    <img src={a4} className='img-target' />
+                    <img src={a4} className='img-target' alt='Soporte inox' />
                   </div>
                   <div class="centrar">
                     <Link to="/tienda?category=1">
@@ -264,7 +264,7 @@ function Home() {
                 </div>
                 <div className='product1' >
                   <div className='center'>
-                    <img src={a5} className='img-target' />
+                    <img src={a5} className='img-target' alt='Tapones inox' />
                   </div>
                   <div class="centrar">
                     <Link to="/tienda?category=1">
@@ -287,7 +287,7 @@ function Home() {
                 <div className='products1'  >
                   <div className='product1' >
                     <div className='center'>
-                      <img src={a6} className='img-target' />
+                      <img src={a6} className='img-target' alt='Uniones inox' />
                     </div>
                     <div class="centrar" >
                       <Link to="/tienda?category=1">
@@ -300,7 +300,7 @@ function Home() {
                   <div className='product1' >
                     <div className='center'>
 
-                      <img src={a7} className='img-target' />
+                      <img src={a7} className='img-target' alt='Soporte vidrio inox' />
 
                     </div>
                     <div class="centrar">
@@ -314,7 +314,7 @@ function Home() {
                   <div className='product1' >
                     <div className='center'>
 
-                      <img src={a8} className='img-target' />
+                      <img src={a8} className='img-target'alt='Pasador inox' />
 
                     </div>
                     <div class="centrar">
@@ -328,7 +328,7 @@ function Home() {
                   <div className='product1' >
                     <div className='center'>
 
-                      <img src={i1} className='img-target' />
+                      <img src={i1} className='img-target' alt='Bisagras inox' />
                     </div>
                     <div class="centrar">
                       <Link to="/tienda?category=1">
@@ -352,14 +352,15 @@ function Home() {
           </button>
         </div>
       </span>
-      <span className='cell'>
-        <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up">
+     
+      <span className='pc'>
+      <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div className='products1' >
                 <div className='product1' >
                   <div className='center'>
-                    <img src={i2} className='img-target' />
+                    <img src={i2} className='img-target' alt='Bridas inox' />
                   </div>
                   <div class="centrar">
                     <Link to="/tienda?category=1">
@@ -372,7 +373,7 @@ function Home() {
                 <div className='product1' >
                   <div className='center'>
 
-                    <img src={i3} className='img-target' />
+                    <img src={i3} className='img-target' alt='Te inox' />
                   </div>
                   <div class="centrar">
                     <Link to="/tienda?category=1">
@@ -382,13 +383,10 @@ function Home() {
                     </Link>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div className='products1' >
+             
                 <div className='product1' >
                   <div className='center'>
-                    <img src={i4} className='img-target' />
+                    <img src={i4} className='img-target' alt='Electrodo'/>
                   </div>
                   <div class="centrar">
                     <Link to="/tienda?category=2">
@@ -400,7 +398,7 @@ function Home() {
                 </div>
                 <div className='product1' >
                   <div className='center'>
-                    <img src={i5} className='img-target' />
+                    <img src={i5} className='img-target' alt='Tornillo' />
                   </div>
                   <div class="centrar">
                     <Link to="/tienda?category=9">
@@ -420,7 +418,7 @@ function Home() {
                 <div className='products1' >
                   <div className='product1' >
                     <div className='center'>
-                      <img src={i8} className='img-target' />
+                      <img src={i8} className='img-target' alt='Kit de baños' />
                     </div>
                     <div class="centrar">
                       <Link to="/tienda?category=1">
@@ -430,7 +428,7 @@ function Home() {
                   </div>
                   <div className='product1' >
                     <div className='center'>
-                      <img src={i6} className='img-target' />
+                      <img src={i6} className='img-target' alt='Satinadoras' />
                     </div>
                     <div class="centrar">
                       <Link to="/tienda?category=3">
@@ -438,15 +436,10 @@ function Home() {
                           <h5 class="titulo-anuncio">Satinadoras </h5>
                         </button>  </Link>   </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div className="content">
-                <div className='products1' >
+                
                   <div className='product1' >
                     <div className='center'>
-                      <img src={i7} className='img-target' />
+                      <img src={i7} className='img-target' alt='Sabrá' />
                     </div>
                     <div class="centrar">
                       <Link to="/tienda?category=3">
@@ -456,7 +449,7 @@ function Home() {
                   </div>
                   <div className='product1' >
                     <div className='center'>
-                      <img src={i9} className='img-target' />
+                      <img src={i9} className='img-target' alt='Planta eléctricas' />
                     </div>
                     <div class="centrar">
                       <Link to="/tienda?category=10">
@@ -475,138 +468,6 @@ function Home() {
             <span class="visually-hidden">Previous</span>
           </button>
           <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </span>
-      <span className='pc'>
-        <div id="carouselExampleControls3" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up ">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-
-              <div className='products1' >
-                <div className='product1' >
-                  <div className='center'>
-                    <img src={a2} className='img-target2' />
-                  </div>
-                  <div class="centrar">
-                    <Link to="/tienda?category=1">
-                      <button className='b-yellow'>
-                        <h5 class="titulo-anuncio">Codo soldar inox</h5>
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-                <div className='product1' >
-                  <div className='center'>
-                    <img src={a3} className='img-target' />
-                  </div>
-                  <div class="centrar">
-                    <Link to="/tienda?category=1">
-                      <button className='b-yellow'>
-                        <h5 class="titulo-anuncio">Codos inox</h5>
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-                <div className='product1' >
-                  <div className='center'>
-                    <img src={a4} className='img-target' />
-                  </div>
-                  <div class="centrar">
-                    <Link to="/tienda?category=1">
-                      <button className='b-yellow'>
-                        <h5 class="titulo-anuncio">Soporte inox</h5>
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-                <div className='product1' >
-                  <div className='center'>
-                    <img src={a5} className='img-target' />
-                  </div>
-                  <div class="centrar">
-                    <Link to="/tienda?category=1">
-                      <button className='b-yellow'>
-                        <h5 class="titulo-anuncio">Tapones inox</h5>
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-
-
-
-
-
-
-              </div>
-            </div>
-            <div class="carousel-item" >
-              <div className="content"  >
-                <div className='products1'  >
-                  <div className='product1' >
-                    <div className='center'>
-                      <img src={a6} className='img-target' />
-                    </div>
-                    <div class="centrar" >
-                      <Link to="/tienda?category=1">
-                        <button className='b-yellow'>
-                          <h5 class="titulo-anuncio" >Uniones inox</h5>
-                        </button>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className='product1' >
-                    <div className='center'>
-
-                      <img src={a7} className='img-target' />
-
-                    </div>
-                    <div class="centrar">
-                      <Link to="/tienda?category=1">
-                        <button className='b-yellow'>
-                          <h5 class="titulo-anuncio">Soporte vidrio inox</h5>
-                        </button>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className='product1' >
-                    <div className='center'>
-
-                      <img src={a8} className='img-target' />
-
-                    </div>
-                    <div class="centrar">
-                      <Link to="/tienda?category=1">
-                        <button className='b-yellow'>
-                          <h5 class="titulo-anuncio">Pasador inox</h5>
-                        </button>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className='product1' >
-                    <div className='center'>
-
-                      <img src={i1} className='img-target' />
-                    </div>
-                    <div class="centrar">
-                      <Link to="/tienda?category=1">
-                        <button className='b-yellow'>
-                          <h5 class="titulo-anuncio">Bisagras inox</h5>
-                        </button>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button id='next' class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls3" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls3" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
@@ -752,7 +613,134 @@ function Home() {
           </button>
         </div>
       </span>
+      <span className='cell'>
+        <div id="carouselExampleControls122" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div className='products1' >
+                <div className='product1' >
+                  <div className='center'>
+                    <img src={i2} className='img-target' alt='Bridas inox' />
+                  </div>
+                  <div class="centrar">
+                    <Link to="/tienda?category=1">
+                      <button className='b-yellow'>
+                        <h5 class="titulo-anuncio">Bridas inox</h5>
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+                <div className='product1' >
+                  <div className='center'>
 
+                    <img src={i3} className='img-target' alt='Te inox' />
+                  </div>
+                  <div class="centrar">
+                    <Link to="/tienda?category=1">
+                      <button className='b-yellow'>
+                        <h5 class="titulo-anuncio">Te inox</h5>
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div className='products1' >
+                <div className='product1' >
+                  <div className='center'>
+                    <img src={i4} className='img-target'alt='Electrodo' />
+                  </div>
+                  <div class="centrar">
+                    <Link to="/tienda?category=2">
+                      <button className='b-yellow'>
+                        <h5 class="titulo-anuncio">Electrodo</h5>
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+                <div className='product1' >
+                  <div className='center'>
+                    <img src={i5} className='img-target' alt='Tornillo' />
+                  </div>
+                  <div class="centrar">
+                    <Link to="/tienda?category=9">
+                      <button className='b-yellow'>
+                        <h5 class="titulo-anuncio">Tornillo
+                        </h5>
+
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div className="content">
+                <div className='products1' >
+                  <div className='product1' >
+                    <div className='center'>
+                      <img src={i8} className='img-target' alt='Kit de baños' />
+                    </div>
+                    <div class="centrar">
+                      <Link to="/tienda?category=1">
+                        <button className='b-yellow'>
+                          <h5 class="titulo-anuncio">Kit de baños</h5>
+                        </button>  </Link>   </div>
+                  </div>
+                  <div className='product1' >
+                    <div className='center'>
+                      <img src={i6} className='img-target' alt='Satinadoras' />
+                    </div>
+                    <div class="centrar">
+                      <Link to="/tienda?category=3">
+                        <button className='b-yellow'>
+                          <h5 class="titulo-anuncio">Satinadoras </h5>
+                        </button>  </Link>   </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div className="content">
+                <div className='products1' >
+                  <div className='product1' >
+                    <div className='center'>
+                      <img src={i7} className='img-target' alt='Sabrá' />
+                    </div>
+                    <div class="centrar">
+                      <Link to="/tienda?category=3">
+                        <button className='b-yellow'>
+                          <h5 class="titulo-anuncio">Sabrá</h5>
+                        </button>   </Link>  </div>
+                  </div>
+                  <div className='product1' >
+                    <div className='center'>
+                      <img src={i9} className='img-target' alt='Planta eléctricas'/>
+                    </div>
+                    <div class="centrar">
+                      <Link to="/tienda?category=10">
+                        <button className='b-yellow'>
+                          <h5 class="titulo-anuncio">Planta eléctricas </h5>
+                        </button>  </Link>   </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls122" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls122" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </span>
       <br />
 
       <br />
