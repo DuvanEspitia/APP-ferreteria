@@ -40,6 +40,9 @@
   .btndata:hover {
     background-color: #0056b3;
   }
+  .btndata:disabled{
+    background-color: gray;
+  }
   .succes-pay{
     height: 100vh;
     display: flex;
@@ -67,4 +70,9 @@
     justify-content: center;
     align-items: center;
     padding: 5px 10px 10px 10px;
+  }
+  .centrar-managedata{
+    margin-left: -20px;
+    width: 120%;
+    font-size: small;
   }

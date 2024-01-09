@@ -55,6 +55,10 @@
     background-color: transparent;
     color: black;
   }
+  .centrar-managedatas{
+    margin-left: -20px;
+    width: 140%;
+  }
   .textm:hover{
     border-color: #001144;
   }

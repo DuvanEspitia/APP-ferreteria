@@ -185,16 +185,71 @@
   /* Estilos del botón principal */
   cursor: pointer;
 }
-
+.t1{
+  font-weight:450;
+  font-size: 16px;
+}
 .dropdown {
   /* Estilos del desplegable para dispositivos móviles */
   display: none;
 }
+.alert-container {
+  position: fixed;  /* Posición fija en la ventana del navegador */
+  top: 10px;        /* Distancia desde la parte superior */
+  right: 10px;      /* Distancia desde la derecha */
+  z-index: 9999;    /* Asegura que esté por encima de otros elementos */
+}
 
+.alert {
+  background-color: #ebf436; /* Color de fondo de la alerta */
+  color: rgb(0, 0, 0);               /* Color del texto */
+  padding: 15px;              /* Espaciado interno */
+  border-radius: 5px;         /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  position: relative;         /* Para usar la posición absoluta en el cierre */
+}
+
+.close-alert {
+  position: absolute; /* Posición absoluta dentro del contenedor */
+  top: 5px;           /* Alineación desde la parte superior */
+  right: 10px;        /* Alineación desde la derecha */
+  cursor: pointer;    /* Cambia el cursor a una mano cuando se pasa sobre él */
+}
+.tex-an{
+  color: black !important ;
+  font-size: 1.2vw !important;
+  
+}
+.col-r{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline !important;
+}
 
   @media  (max-width: 768px) {
+    .close-alert {
+      position: absolute; /* Posición absoluta dentro del contenedor */
+      top: 5px;           /* Alineación desde la parte superior */
+      right: 10px;        /* Alineación desde la derecha */
+      cursor: pointer;    /* Cambia el cursor a una mano cuando se pasa sobre él */
+    }
+    .alert-container {
+      position: fixed;  /* Posición fija en la ventana del navegador */
+      top: 300px;        /* Distancia desde la parte superior */
+      right: 10px;      /* Distancia desde la derecha */
+      z-index: 9999;    /* Asegura que esté por encima de otros elementos */
+    }
     
- 
+    .tex-an{
+      color: black !important ;
+      font-size: 4vw !important;
+      
+    }
+    .col-r{
+      display: flex;
+      flex-direction: row;
+      align-items: baseline !important;
+    }
     .products {
       display: grid ;
       grid-template-columns:  auto  ;
